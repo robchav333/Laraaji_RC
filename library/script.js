@@ -26,7 +26,7 @@ let track = document.createElement('audio');
 //All songs list
 let All_song = [{
 		name: "I Can Only Bliss Out",
-		path: "../I Can Only Bliss Out .mp3",
+		path: "../I Can Only Bliss Out.mp3",
 		img: "../pics/l1.jpg",
 
 	},
