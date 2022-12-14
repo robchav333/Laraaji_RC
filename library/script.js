@@ -25,23 +25,23 @@ let track = document.createElement('audio');
 
 //All songs list
 let All_song = [{
-		name: "I Can Only Bliss Out",
-		path: "../I Can Only Bliss Out.mp3",
-		img: "../pics/l1.jpg",
+    name: "I Can Only Bliss Out",
+    path: "Bliss Out (FDays).mp3",
+    img: "../pics/l1.jpg",
 
-	},
-	{
-		name: "Om Namah Shivaya",
-		path: "../Om Namah Shivaya.mp3",
-		img: "../pics/l2.jpeg",
+  },
+  {
+    name: "Om Namah Shivaya",
+    path: "Om Namah Shivaya copy.mp3",
+    img: "../pics/l2.jpeg",
 
-	},
-	{
+  },
+  {
     name: "Today Is This Magic Quality",
-		path: "../Today Is This Magic Quality.mp3",
-		img: "../pics/l4.jpg",
+    path: "Today Is This Magic Quality copy.mp3",
+    img: "../pics/l4.jpg",
 
-	},
+  },
 
   {
     name: "Prana Light",
@@ -57,17 +57,17 @@ let All_song = [{
 
 
 // function load the track
-function load_track(index_no) {
+function load_track(index_no){
 	clearInterval(timer);
 	reset_slider();
 
 	track.src = All_song[index_no].path;
 	title.innerHTML = All_song[index_no].name;
 	track_image.src = All_song[index_no].img;
-	artist.innerHTML = All_song[index_no].singer;
-	track.load();
+    artist.innerHTML = All_song[index_no].singer;
+    track.load();
 
-	timer = setInterval(range_slider, 1000);
+	timer = setInterval(range_slider ,1000);
 	total.innerHTML = All_song.length;
 	present.innerHTML = index_no + 1;
 }
@@ -76,7 +76,7 @@ load_track(index_no);
 
 
 //mute sound function
-function mute_sound() {
+function mute_sound(){
 	track.volume = 0;
 	volume.value = 0;
 	volume_show.innerHTML = 0;
@@ -84,30 +84,30 @@ function mute_sound() {
 
 
 // checking.. the song is playing or not
-function justplay() {
-	if (Playing_song == false) {
-		playsong();
+ function justplay(){
+ 	if(Playing_song==false){
+ 		playsong();
 
-	} else {
-		pausesong();
-	}
-}
+ 	}else{
+ 		pausesong();
+ 	}
+ }
 
 
 // reset song slider
-function reset_slider() {
-	slider.value = 0;
-}
+ function reset_slider(){
+ 	slider.value = 0;
+ }
 
 // play song
-function playsong() {
-	track.play();
-	Playing_song = true;
-	play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
+function playsong(){
+  track.play();
+  Playing_song = true;
+  play.innerHTML = '<i class="fa fa-pause" aria-hidden="true"></i>';
 }
 
 //pause song
-function pausesong() {
+function pausesong(){
 	track.pause();
 	Playing_song = false;
 	play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
@@ -115,12 +115,12 @@ function pausesong() {
 
 
 // next song
-function next_song() {
-	if (index_no < All_song.length - 1) {
+function next_song(){
+	if(index_no < All_song.length - 1){
 		index_no += 1;
 		load_track(index_no);
 		playsong();
-	} else {
+	}else{
 		index_no = 0;
 		load_track(index_no);
 		playsong();
@@ -130,13 +130,13 @@ function next_song() {
 
 
 // previous song
-function previous_song() {
-	if (index_no > 0) {
+function previous_song(){
+	if(index_no > 0){
 		index_no -= 1;
 		load_track(index_no);
 		playsong();
 
-	} else {
+	}else{
 		index_no = All_song.length;
 		load_track(index_no);
 		playsong();
@@ -145,46 +145,46 @@ function previous_song() {
 
 
 // change volume
-function volume_change() {
+function volume_change(){
 	volume_show.innerHTML = recent_volume.value;
 	track.volume = recent_volume.value / 100;
 }
 
 // change slider position
-function change_duration() {
+function change_duration(){
 	slider_position = track.duration * (slider.value / 100);
 	track.currentTime = slider_position;
 }
 
 // autoplay function
-function autoplay_switch() {
-	if (autoplay == 1) {
-		autoplay = 0;
-		auto_play.style.background = "rgba(255,255,255,0.2)";
-	} else {
-		autoplay = 1;
-		auto_play.style.background = "#FF8A65";
+function autoplay_switch(){
+	if (autoplay==1){
+       autoplay = 0;
+       auto_play.style.background = "rgba(255,255,255,0.2)";
+	}else{
+       autoplay = 1;
+       auto_play.style.background = "#148F77";
 	}
 }
 
 
-function range_slider() {
+function range_slider(){
 	let position = 0;
 
-	// update slider position
-	if (!isNaN(track.duration)) {
-		position = track.currentTime * (100 / track.duration);
-		slider.value = position;
-	}
+        // update slider position
+		if(!isNaN(track.duration)){
+		   position = track.currentTime * (100 / track.duration);
+		   slider.value =  position;
+	      }
 
 
-	// function will run when the song is over
-	if (track.ended) {
-		play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
-		if (autoplay == 1) {
-			index_no += 1;
-			load_track(index_no);
-			playsong();
-		}
-	}
-}
+       // function will run when the song is over
+       if(track.ended){
+       	 play.innerHTML = '<i class="fa fa-play" aria-hidden="true"></i>';
+           if(autoplay==1){
+		       index_no += 1;
+		       load_track(index_no);
+		       playsong();
+           }
+	    }
+     }
