@@ -26,25 +26,25 @@ let track = document.createElement('audio');
 //All songs list
 let All_song = [{
 		name: "I Can Only Bliss Out",
-		path: "../Om Namah Shivaya.mp3",
+		path: "../I Can Only Bliss Out.mp3",
 		img: "../pics/l1.jpg",
 		singer: "1"
 	},
 	{
-		name: "second song",
+		name: "Om Namah Shivaya",
 		path: "../Om Namah Shivaya.mp3",
 		img: "../pics/l2.jpeg",
 		singer: "2"
 	},
 	{
-    name: "third song",
+    name: "Today Is This Magic Quality",
 		path: "../Today Is This Magic Quality.mp3",
 		img: "../pics/l3.jpeg",
 		singer: "3"
 	},
 
   {
-    name: "Fourth song",
+    name: "Prana Light",
     path: "../Prana Light.mp3",
     img: "../pics/l5.jpeg",
     singer: "4"

@@ -2,9 +2,9 @@
   --gradient: linear-gradient(90deg,#FF6200,  #FD9346, #FDB777);
 
 }
-html, body {
+ body {
   font-family: basic-sans, sans-serif;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,6 +21,42 @@ html, body {
   0% {background-position: left}
   50% {background-position: right}
   100% {background-position: left}
+}
+
+ul{
+  margin-top:  0;
+  padding: 0;
+  list-style: none;
+}
+
+ul li{
+  float: left;
+  width: 150px;
+  height: 40px;
+  background-color: #C36721;
+  opacity: .9;
+  line-height: 40px;
+  font-size: 20px;
+}
+
+ul li a{
+  text-decoration: none;
+  color: white;
+  padding-left: 5px;
+  display: block;
+}
+
+ul li a:hover {
+  background-color: salmon;
+
+}
+
+ul li ul li{
+  display: none;
+}
+
+ul li:hover ul li{
+  display: block;
 }
 
 
@@ -159,47 +195,4 @@ main {
     font-size: 3em;
   }
 
-  .menu {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 300px;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .menu ul {
-    position: relative;
-  }
-
-  .menu ul li {
-    list-style: none;
-  }
-
-  .menu ul li a {
-    text-decoration: none;
-    font-size: 24px;
-    color: #111;
-  }
-
-  .menu ul li a:hover {
-    color: #03a9f4;
-  }
-
-  @media (max-width: 991px) {
-
-    .showcase,
-    .showcase header {
-      padding: 40px;
-    }
-
-    .text h2 {
-      font-size: 3em;
-    }
-
-    .text h3 {
-      font-size: 2em;
-    }
-  }
+  ////////////
