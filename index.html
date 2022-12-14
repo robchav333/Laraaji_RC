@@ -4,7 +4,7 @@
 <head>
 
 
-
+  <meta charset="UTF-8">
   <title>Portfolio_RC</title>
   <link rel="stylesheet" href="style.css">
 
@@ -33,7 +33,7 @@
        <p>Descripton holder for LARAAJI...</p>
        <a href="music.html">Music Library</a>
      </div>
-
+</section>
    <div class="menu">
      <ul>
      <li><a href="./library/index.html">Library </a></li>
@@ -42,13 +42,16 @@
    </ul>
    </div>
 
+<script>
+const menuToggle = document.querySelector('.toggle');
+     const showcase = document.querySelector('.showcase');
 
+     menuToggle.addEventListener('click', () => {
+       menuToggle.classList.toggle('active');
+       showcase.classList.toggle('active');
+     })
 
-
-
-
-
-
+     </script>
 
 
 
