@@ -10,7 +10,7 @@ let track_image = document.querySelector('#track_image');
 let auto_play = document.querySelector('#auto');
 let present = document.querySelector('#present');
 let total = document.querySelector('#total');
-let artist = document.querySelector('#artist');
+// let artist = document.querySelector('#artist');
 
 
 let timer;
@@ -28,26 +28,26 @@ let All_song = [{
 		name: "I Can Only Bliss Out",
 		path: "../I Can Only Bliss Out.mp3",
 		img: "../pics/l1.jpg",
-		singer: "1"
+
 	},
 	{
 		name: "Om Namah Shivaya",
 		path: "../Om Namah Shivaya.mp3",
 		img: "../pics/l2.jpeg",
-		singer: "2"
+
 	},
 	{
     name: "Today Is This Magic Quality",
 		path: "../Today Is This Magic Quality.mp3",
-		img: "../pics/l3.jpeg",
-		singer: "3"
+		img: "../pics/l4.jpg",
+
 	},
 
   {
     name: "Prana Light",
     path: "../Prana Light.mp3",
-    img: "../pics/l5.jpeg",
-    singer: "4"
+    img: "../pics/l11.jpeg",
+
   },
 
 ];
@@ -64,7 +64,7 @@ function load_track(index_no) {
 	track.src = All_song[index_no].path;
 	title.innerHTML = All_song[index_no].name;
 	track_image.src = All_song[index_no].img;
-	artist.innerHTML = All_song[index_no].singer;
+	// artist.innerHTML = All_song[index_no].singer;
 	track.load();
 
 	timer = setInterval(range_slider, 1000);

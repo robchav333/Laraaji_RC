@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
 :root {
   --gradient: linear-gradient(90deg,#FF6200,  #FD9346, #FDB777);
 
 }
  body {
-  font-family: basic-sans, sans-serif;
+font-family: 'Poppins', sans-serif;
     /* min-height: 100vh; */
     display: flex;
     justify-content: center;
@@ -90,6 +92,7 @@ img {
 
 video {
   width: 100%;
+  text-align: justify;
 }
 p:first-child {
   margin-top: 10;
@@ -124,21 +127,21 @@ h1 {
 }
 
 .first {
-  font-family: 'questa-grande';
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   font-size: 1em;
   color: white;
 }
 
 .second {
-  font-family: 'brandon-grotesque';
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   font-size: 0.5em;
   color: white;
 }
 
 .third {
-  font-family: 'ltc-bodoni-175';
+  font-family: 'Poppins', sans-serif;
   text-transform: uppercase;
   font-size: 2em;
   color: white;
@@ -155,7 +158,8 @@ cite {
 
 .name {
   font-weight: 900;
-  color: #a09e9d;
+  color: #cbcfd4;
+  opacity: .9;
 }
 
 main {
